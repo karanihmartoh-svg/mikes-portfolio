@@ -1,0 +1,21 @@
+{
+  "name": "mikes-portfolio",
+  "version": "1.0.0",
+  "description": "Static portfolio site — build scripts for minifying JS with esbuild",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "dotenv": "^16.6.1",
+    "esbuild": "^0.18.11"
+  },
+  "scripts": {
+    "build:ui": "esbuild src/ui.js --outfile=js/ui.min.js --minify --sourcemap",
+    "build:gallery": "esbuild src/gallery.js --outfile=js/gallery.min.js --minify --sourcemap",
+    "build:app": "esbuild src/app.js --outfile=js/app.min.js --minify --sourcemap",
+    "build": "npm run build:ui && npm run build:gallery && npm run build:app",
+    "watch": "npm run build -- --watch",
+    "serve": "npx serve -s . -l 5000",
+    "start:api": "node server/index.js",
+    "start": "concurrently \"npm run serve\" \"npm run start:api\""
+  }
+}

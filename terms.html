@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service — Mike On Sax</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-950 text-gray-100">
+    <main class="min-h-screen px-6 py-16 lg:px-12">
+      <div class="mx-auto max-w-4xl rounded-[32px] border border-white/10 bg-gray-950/90 p-10 shadow-[0_40px_120px_rgba(8,11,20,0.35)]">
+        <div class="mb-10 text-center">
+          <p class="section-tag">Terms of Service</p>
+          <h1 class="section-title">Booking Terms for Mike On Sax</h1>
+          <p class="mx-auto mt-4 max-w-2xl text-gray-400">These terms describe how bookings are handled, what to expect from performances, and the responsibilities of both parties.</p>
+        </div>
+
+        <section class="space-y-8 text-gray-300">
+          <div>
+            <h2 class="text-xl font-semibold text-white">Booking and Deposits</h2>
+            <p class="mt-3">A 50% deposit is required to reserve your event date. The remaining balance is due before the performance begins.</p>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold text-white">Performance Details</h2>
+            <p class="mt-3">Performance time, song selection, and event attire are confirmed in advance. Please share all event details as early as possible to ensure a smooth experience.</p>
+          </div>
+          
+          <div>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold text-white">Travel and Logistics</h2>
+            <p class="mt-3">Travel, accommodation, and equipment setup may incur extra fees for locations outside Nairobi. These charges will be agreed upon during booking.</p>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold text-white">Liability</h2>
+            <p class="mt-3">Mike On Sax is not liable for cancellations or delays caused by weather, venue issues, or client changes beyond control. We will make every effort to deliver the performance as agreed.</p>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-semibold text-white">Intellectual Property</h2>
+            <p class="mt-3">All creative content on this site is owned by Mike On Sax and may not be copied or used without permission.</p>
+          </div>
+        </section>
+
+        <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
+          <a href="index.html" class="text-sky-300 hover:text-sky-200">Back to Home</a>
+          <span>&copy; 2026 Mike On Sax</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
