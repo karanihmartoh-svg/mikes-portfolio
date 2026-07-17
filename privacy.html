@@ -61,11 +61,33 @@
           </div>
         </section>
 
+        <div class="mt-12 rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+          <button id="privacy-confirm" type="button" class="btn-primary justify-center px-6 py-3 text-sm">
+            I have read and understood
+          </button>
+        </div>
+
         <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-gray-500 sm:flex-row sm:items-center sm:justify-between">
           <a href="index.html" class="text-sky-300 hover:text-sky-200">Back to Home</a>
           <span>&copy; 2026 Mike On Sax</span>
         </div>
       </div>
     </main>
+    <script>
+      const privacyConfirmButton = document.getElementById('privacy-confirm');
+      const privacyConfirmed = localStorage.getItem('privacyPolicyConfirmed') === 'true';
+
+      function updatePrivacyConfirmation() {
+        privacyConfirmButton.textContent = 'Confirmed: read and understood';
+        privacyConfirmButton.setAttribute('aria-pressed', 'true');
+      }
+
+      if (privacyConfirmed) updatePrivacyConfirmation();
+
+      privacyConfirmButton.addEventListener('click', () => {
+        localStorage.setItem('privacyPolicyConfirmed', 'true');
+        updatePrivacyConfirmation();
+      });
+    </script>
   </body>
 </html>
